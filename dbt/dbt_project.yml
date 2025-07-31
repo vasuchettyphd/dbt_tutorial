@@ -18,6 +18,4 @@ clean-targets:
 
 models:
   house_prices_project:
-    +materialized: view  # Default materialization
-    example_models:
-      +materialized: table
+    +materialized: view  # Default materialization, switch to table
