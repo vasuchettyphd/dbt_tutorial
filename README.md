@@ -116,13 +116,7 @@ SELECT * FROM avg_sale_price;
 When finished, **exit the PostgreSQL shell** with:
 
 ```sql
-\\q
-```
-
-And if you are in a container bash session, exit with:
-
-```bash
-exit
+\q
 ```
 
 ---
