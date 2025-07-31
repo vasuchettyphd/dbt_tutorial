@@ -52,14 +52,24 @@ dbt run         # build models (e.g., create views)
 
 ## 🗞 What's in the Project?
 
-### 📂 `data/house_prices.csv`
+### 📂 `data/house_prices.csv` & `house_prices_large.csv`
 
-Seeded data with house sale information like:
+Seeded datasets with house sale information:
 
 - `neighborhood`
 - `lot_area`
 - `year_built`
 - `sale_price`
+
+The datasets are:
+
+- `house_prices.csv`: A small, clean dataset for introductory exercises.
+- `house_prices_large.csv`: A larger, messier dataset with:
+  - 500+ rows
+  - Missing values
+  - Duplicate rows
+
+These are loaded as separate seed tables and can be used to teach data cleaning, filtering, and testing.
 
 ### 📂 `models/avg_sale_price.sql`
 
