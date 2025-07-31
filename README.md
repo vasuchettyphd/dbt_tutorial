@@ -101,7 +101,7 @@ SELECT * FROM avg_sale_price;
 
 ---
 
-## 🢼 Shut Down
+## 🧹 Clean Up
 
 To stop and remove containers and volumes:
 
