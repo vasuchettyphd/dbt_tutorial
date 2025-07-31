@@ -23,7 +23,7 @@ cd dbt_tutorial
 ### 2. 🐳 Start the Environment
 
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 This will:
