@@ -123,13 +123,13 @@ When finished, **exit the PostgreSQL shell** with:
 
 ## 🔌 Clean Up
 
+If `docker-compose up` is running in the foreground, stop it with `Ctrl + C` first.
+
 To stop and remove containers and volumes:
 
 ```bash
 docker-compose down -v
 ```
-
-If `docker-compose up` is running in the foreground, stop it with `Ctrl + C`.
 
 ---
 
