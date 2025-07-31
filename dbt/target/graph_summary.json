@@ -1,0 +1,1 @@
+{"_invocation_id": "c35428c0-105a-41e2-9ab4-45b2dc752834", "linked": {"0": {"name": "model.house_prices_project.avg_sale_price", "type": "model"}, "1": {"name": "seed.house_prices_project.house_prices", "type": "seed", "succ": [0]}}}
