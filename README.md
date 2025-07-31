@@ -23,7 +23,7 @@ cd dbt_tutorial
 ### 2. 🐳 Start the Environment
 
 ```bash
-docker-compose up --build -d
+docker-compose up --build
 ```
 
 This will:
@@ -48,9 +48,17 @@ dbt debug       # check config and connection
 dbt run         # build models (e.g., create views)
 ```
 
+When you're done using the container, **exit the bash session** with:
+
+```bash
+exit
+```
+
+If you started `docker-compose` with `up` (not `-d`), you can also stop it with `Ctrl + C`.
+
 ---
 
-## 🗳 What's in the Project?
+## 🗞 What's in the Project?
 
 ### 📂 Seed Datasets
 
@@ -105,9 +113,21 @@ Then inside PostgreSQL:
 SELECT * FROM avg_sale_price;
 ```
 
+When finished, **exit the PostgreSQL shell** with:
+
+```sql
+\\q
+```
+
+And if you are in a container bash session, exit with:
+
+```bash
+exit
+```
+
 ---
 
-## 🤹 Clean Up
+## 🔌 Clean Up
 
 To stop and remove containers and volumes:
 
@@ -115,9 +135,11 @@ To stop and remove containers and volumes:
 docker-compose down -v
 ```
 
+If `docker-compose up` is running in the foreground, stop it with `Ctrl + C`.
+
 ---
 
 ## 🧠 Want to Learn More?
 
 - [DBT Learn](https://docs.getdbt.com/docs/introduction)
-- [DBT CLI Reference](https://docs.getdbt.com/reference/dbt-cli)
+- [DBT Command Reference](https://docs.getdbt.com/reference/dbt-commands)
