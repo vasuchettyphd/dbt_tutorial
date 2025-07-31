@@ -50,26 +50,30 @@ dbt run         # build models (e.g., create views)
 
 ---
 
-## 🗞 What's in the Project?
+## 🗳 What's in the Project?
 
-### 📂 `data/house_prices.csv` & `house_prices_large.csv`
+### 📂 Seed Datasets
 
-Seeded datasets with house sale information:
+#### `house_prices.csv`
+A small, clean dataset for introductory exercises with fields:
+- `id`, `neighborhood`, `lot_area`, `year_built`, `overall_qual`, `overall_cond`, `full_bath`, `bedroom_abvgr`, `sale_price`
 
-- `neighborhood`
-- `lot_area`
-- `year_built`
-- `sale_price`
+#### `house_prices_large.csv`
+A larger, messier dataset with:
+- 500+ rows
+- Missing values in numeric fields
+- Duplicate rows
+- Great for teaching data cleaning and validation techniques
 
-The datasets are:
+#### `client_preferences.csv`
+A synthetic dataset representing client preferences:
+- `client_id`, `preferred_neighborhood`
+- Ranges for `price`, `bedrooms`, `bathrooms`, and `year_built`
+- Used to build models that match clients to houses
 
-- `house_prices.csv`: A small, clean dataset for introductory exercises.
-- `house_prices_large.csv`: A larger, messier dataset with:
-  - 500+ rows
-  - Missing values
-  - Duplicate rows
+These CSVs are loaded using `dbt seed` and appear as tables in your database.
 
-These are loaded as separate seed tables and can be used to teach data cleaning, filtering, and testing.
+---
 
 ### 📂 `models/avg_sale_price.sql`
 
@@ -84,6 +88,8 @@ from {{ ref('house_prices') }}
 group by neighborhood, overall_qual
 order by avg_price desc
 ```
+
+---
 
 ## 🔍 Inspect the Results: Use `psql` from Docker
 
@@ -101,7 +107,7 @@ SELECT * FROM avg_sale_price;
 
 ---
 
-## 🧹 Clean Up
+## 🤹 Clean Up
 
 To stop and remove containers and volumes:
 
